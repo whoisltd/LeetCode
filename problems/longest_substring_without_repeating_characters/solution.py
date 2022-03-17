@@ -1,9 +1,5 @@
-class Solution(object):
-    def lengthOfLongestSubstring(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
         i = 0
         ans = 0
         table = {}
@@ -13,4 +9,3 @@ class Solution(object):
             table[s[j]] = j+1
             ans = max(ans, j - i+1)
         return ans
-            
