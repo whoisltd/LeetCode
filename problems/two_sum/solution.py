@@ -5,10 +5,9 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        hashmap = {}
+        hash_i = {}
         for i in range(len(nums)):
             a = target - nums[i]
-            if a in hashmap:
-                return [i, hashmap[a]]
-            hashmap[nums[i]] = i
-            
+            if a in hash_i:
+                return [i, hash_i[a]]
+            hash_i[nums[i]] = i
